@@ -1,0 +1,15 @@
+Shell Commands for Data Cleaning
+
+1. javac -classpath `hadoop classpath` *.java
+2. jar cvf clean_data.jar *.class
+3. hadoop jar clean_data.jar MapReduceDriver final/data.tsv final/data_ratings.tsv final/output21
+
+Shell Commands for Data Profiling
+
+1. javac -classpath `hadoop classpath` *.java
+2. jar cvf profile_data.jar *.class
+
+Now passing the output file of Data Cleaning Map Reduce as input for Data Profiling Map Reduce job
+3. hadoop jar profile_data.jar DriverProfiling final/output21/part-r-00000 final/output22
+
+

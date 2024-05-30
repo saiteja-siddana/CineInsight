@@ -1,0 +1,5 @@
+Shell Commands for Data Integration of movieLens and Imdb
+
+1. javac -classpath `hadoop classpath` *.java
+2. jar cvf clean_data.jar *.class
+3. hadoop jar clean_data.jar MapReduceDriver <clean_data_movielens> <clean_data_imdb> final/output21
